@@ -5,7 +5,7 @@
       "args": [
         "-y",
         "@modelcontextprotocol/server-sse",
-        "https://agent-to-agent-commerce-swart.vercel.app/api/v1/mcp"
+        "https://agent-2-agent.com/api/v1/mcp"
       ],
       "env": {
         "X_API_KEY": "YOUR_A2A_API_KEY"

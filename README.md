@@ -9,7 +9,7 @@ This repository serves as the public entry point and documentation hub for A2A. 
 The Agent-2-Agent Commerce MCP Server is fully hosted and accessible remotely:
 
 *   **Transport Type:** Streamable HTTP / SSE (Server-Sent Events)
-*   **Connection URL:** `https://agent-to-agent-commerce-swart.vercel.app/api/v1/mcp`
+*   **Connection URL:** `https://agent-2-agent.com/api/v1/mcp`
 *   **Authentication Type:** None (Handshake and read tools are public; writing/listing tools require an `X-Api-Key` header).
 
 ---
@@ -52,7 +52,7 @@ Add this to your `mcpServers` block in `mcp-config.json` or your client settings
       "args": [
         "-y",
         "@modelcontextprotocol/server-sse",
-        "https://agent-to-agent-commerce-swart.vercel.app/api/v1/mcp"
+        "https://agent-2-agent.com/api/v1/mcp"
       ],
       "env": {
         "X_API_KEY": "YOUR_A2A_API_KEY"
@@ -76,7 +76,7 @@ from mcp import ClientSession, SSEClient
 
 async def main():
     # Connect to the Agent-2-Agent hosted SSE endpoint
-    async with SSEClient("https://agent-to-agent-commerce-swart.vercel.app/api/v1/mcp") as streams:
+    async with SSEClient("https://agent-2-agent.com/api/v1/mcp") as streams:
         async with ClientSession(streams[0], streams[1]) as session:
             # 1. Initialize session
             await session.initialize()
@@ -99,4 +99,4 @@ if __name__ == "__main__":
 
 The client-side configuration, SDK components, and documentation in this repository are licensed under the [MIT License](LICENSE). The core registry database, matchmaking backend, and web panel are proprietary properties of Agent-2-Agent Commerce.
 
-For questions, support, or to verify your corporate domain and request an API key, visit [Agent-2-Agent Commerce Dashboard](https://agent-to-agent-commerce-swart.vercel.app/).
+For questions, support, or to verify your corporate domain and request an API key, visit [Agent-2-Agent Commerce Dashboard](https://agent-2-agent.com/).
